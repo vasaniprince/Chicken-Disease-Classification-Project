@@ -42,7 +42,6 @@ def create_directories(path_to_directories:list, verbose=True):
     """
     create list of directories
 
-
     Args:
        path_to_directories (list): list of path of directories
        ignore_log(boll, optional):ignore if multiple dirs is to be created.Defaults to False.
@@ -125,7 +124,7 @@ def get_size(path: Path) -> str:
           str:size in kb
     """
 
-    size_in_kb= round(os.path.getsize(path/1024))
+    size_in_kb = round(os.path.getsize(path)/1024)
     return f"~ {size_in_kb} KB"
 
 def decodeImage(imgstring,fileName):
